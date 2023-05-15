@@ -51,7 +51,7 @@ return stringDesencriptada
 function copiar(){
     const contenido = document.getElementById("textoDesencriptado");
     const textoCopiado = contenido.textContent;
-    navigator.clipboard.writeText(textoCopiado);
-    alert("texto copiado es:"+ textoCopiado);
+    navigator.clipboard.writeText(mensaje.value);
+    alert("texto copiado es:"+ mensaje.value);
 
 }
