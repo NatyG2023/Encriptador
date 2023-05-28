@@ -10,6 +10,17 @@ const btnCopiar = document.getElementById("copy-btn");
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
+
+// Detectar que solo introduzca letras minusculas y sin acentos
+textArea.addEventListener('input', function () {
+    let text_input = textArea.value;
+
+    // Convertir a minúsculas y quitar caracteres no permitidos
+    text_input = text_input.toLowerCase().replace(/[^a-zñ\s]/g, '');
+    textArea.value = text_input;
+});
+
+
 function btnEncriptar(){
     const textoEncriptado =encriptar(textArea.value)
     mensaje.value = textoEncriptado
